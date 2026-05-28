@@ -5,6 +5,7 @@ async function createPaymentIntent({ amount, currency = 'usd', reference }) {
   const params = {
     amount,
     currency,
+    payment_method_types: ['card'],
     metadata: {},
   };
   if (reference) {
